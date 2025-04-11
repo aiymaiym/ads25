@@ -1,6 +1,6 @@
 package structures;
 
-public class MyArrayList<T> extends MyList<T> {
+public class MyArrayList<T> implements MyList<T> {
     private Object[] data;
     private int size;
 
@@ -14,6 +14,19 @@ public class MyArrayList<T> extends MyList<T> {
         ensureCapacity();
         data[size++] = element;
     }
+
+    public void add(int index, T element) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        ensureCapacity();
+        for (int i = size; i > index; i--) {
+            data[i] = data[i - 1];
+        }
+        data[index] = element;
+        size++;
+    }
+
 
     @Override
     public T get(int index) {

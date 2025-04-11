@@ -1,15 +1,49 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import structures.*;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // 🔹 Тест MyArrayList
+        MyList<Integer> arrayList = new MyArrayList<>();
+        arrayList.add(10);
+        arrayList.add(20);
+        arrayList.add(30);
+        System.out.println("ArrayList get(1): " + arrayList.get(1)); // 20
+        arrayList.remove(0);
+        System.out.println("ArrayList after remove: " + arrayList.get(0)); // 20
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // 🔹 Тест MyLinkedList
+        MyList<String> linkedList = new MyLinkedList<>();
+        linkedList.add("one");
+        linkedList.add("two");
+        linkedList.add("three");
+        linkedList.remove(1);
+        for (String s : linkedList) {
+            System.out.println("LinkedList element: " + s); // one, three
         }
+
+        // 🔹 Тест MyStack
+        MyStack<Integer> stack = new MyStack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println("Stack pop: " + stack.pop()); // 3
+        System.out.println("Stack peek: " + stack.peek()); // 2
+
+        // 🔹 Тест MyQueue
+        MyQueue<String> queue = new MyQueue<>();
+        queue.enqueue("A");
+        queue.enqueue("B");
+        queue.enqueue("C");
+        System.out.println("Queue dequeue: " + queue.dequeue()); // A
+        System.out.println("Queue peek: " + queue.peek()); // B
+
+        // 🔹 Тест MyMinHeap
+        MyMinHeap<Integer> heap = new MyMinHeap<>();
+        heap.add(5);
+        heap.add(2);
+        heap.add(8);
+        heap.add(1);
+        System.out.println("Heap poll: " + heap.poll()); // 1
+        System.out.println("Heap peek: " + heap.peek()); // 2
     }
 }

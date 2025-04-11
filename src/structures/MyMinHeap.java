@@ -52,7 +52,11 @@ public class MyMinHeap<T extends Comparable<T>> {
     }
 
     private void heapifyDown(int index, T value) {
-        heap.add(index, value); // вставляем в корень
+        if (heap.size() > index) {
+            heap.remove(index);
+        }
+        heap.add(index, value);
+
         int size = heap.size();
         while (index < size) {
             int left = index * 2 + 1;

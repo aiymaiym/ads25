@@ -1,3 +1,5 @@
+package structures;
+
 public interface MyList<T> extends Iterable<T>{
     void add( T element);
     T get(int index);

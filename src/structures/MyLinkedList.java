@@ -1,3 +1,5 @@
+package structures;
+
 public class MyLinkedList<T> implements MyList<T> {
     private class MyNode {
         T data;

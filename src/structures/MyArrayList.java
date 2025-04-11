@@ -1,3 +1,5 @@
+package structures;
+
 public class MyArrayList<T> extends MyList<T> {
     private Object[] data;
     private int size;

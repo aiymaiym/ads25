@@ -1,4 +1,5 @@
 package structures;
+// Min-heap using array based structure
 
 public class MyMinHeap<T extends Comparable<T>> {
     private MyArrayList<T> heap;
@@ -39,7 +40,7 @@ public class MyMinHeap<T extends Comparable<T>> {
     }
 
 
-
+    // Moves element up to keep heap property
     private void heapifyUp(int index) {
         T value = heap.get(index);
         while (index > 0) {
@@ -51,6 +52,7 @@ public class MyMinHeap<T extends Comparable<T>> {
         }
     }
 
+    // Moves element down to keep heap property
     private void heapifyDown(int index, T value) {
         if (heap.size() > index) {
             heap.remove(index);

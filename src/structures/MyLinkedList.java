@@ -11,6 +11,7 @@ public class MyLinkedList<T> implements MyList<T> {
         }
     }
 
+
     private MyNode head;
     private MyNode tail;
     private int size;
@@ -58,7 +59,7 @@ public class MyLinkedList<T> implements MyList<T> {
         size--;
         return toRemove.data;
     }
-
+    // Node with value, next and previous references
     private MyNode getNode(int index) {
         if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
 

@@ -1,4 +1,5 @@
 package structures;
+// Stack (LIFO) using MyArrayList
 
 public class MyStack<T> {
     private MyArrayList<T> list;
@@ -7,14 +8,14 @@ public class MyStack<T> {
         list = new MyArrayList<>();
     }
     public void push(T element) {
-        list.add(element);
+        list.add(element); // Adds element on top
     }
 
     public T pop() {
         if (isEmpty()) {
             throw new IllegalStateException("Stack is empty");
         }
-        return list.remove(list.size() - 1);
+        return list.remove(list.size() - 1); // Removes top element
     }
     public T peek() {
         if (isEmpty()) {

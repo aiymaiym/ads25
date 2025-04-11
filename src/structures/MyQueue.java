@@ -1,4 +1,5 @@
 package structures;
+// Queue (FIFO) using MyLinkedList
 
 public class MyQueue<T> {
     private MyLinkedList<T> list;
@@ -7,13 +8,15 @@ public class MyQueue<T> {
         list = new MyLinkedList<>();
     }
     public void enqueue(T element) {
-        list.add(element);
+        list.add(element); // Adds element to the end
+
     }
     public T dequeue() {
         if (isEmpty()) {
             throw new IllegalStateException("Queue is empty");
         }
-        return list.remove(0);
+        return list.remove(0); // Removes element from the front
+
     }
 
     public T peek() {

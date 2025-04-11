@@ -1,20 +1,22 @@
 package structures;
 
 public class MyArrayList<T> implements MyList<T> {
-    private Object[] data;
-    private int size;
+    private Object[] data; // Internal array storage
+    private int size; // Number of actual elements
 
     public MyArrayList() {
         data = new Object[10];
         size = 0;
     }
 
+    // Adds element to the end
     @Override
     public void add(T element) {
         ensureCapacity();
         data[size++] = element;
     }
 
+    // Removes element at index
     public void add(int index, T element) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
@@ -57,7 +59,7 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
 
-
+    // Ensures capacity is enough, doubles if full
     private void ensureCapacity() {
         if (size == data.length) {
             Object[] newData = new Object[data.length * 2];

@@ -3,6 +3,7 @@ For data structure i've implemented Iterator without using java.util.*, except.
 In project, stack is based on MyArrayList, because push and pop at the end is fast. Queue uses MyLinkedList to avoid shifting on dequeue. MinHeap is built on array logic with full heapify control.
 Also i've added minimum 5 commits with proper GitHub usage, i've used  memory management tools like resizing arrays, node linking
 Here i structured all data: 
+
 public interface MyList<T> extends Iterable<T> {
     void add(T element);
     T get(int index);
@@ -10,6 +11,7 @@ public interface MyList<T> extends Iterable<T> {
     int size();
     boolean isEmpty();
 }
+
 Then, i created MyArrayList, which uses a dynamic array:
 private void ensureCapacity() {
     if (size == data.length) {
@@ -18,6 +20,7 @@ private void ensureCapacity() {
         data = newData;
     }
 }
+
 For MyLinkedList, I used a custom MyNode class and implemented proper linking:
 private class MyNode {
     T data;
@@ -27,6 +30,7 @@ private class MyNode {
         this.data = data;
     }
 }
+
 In Main.java, I tested all the data structures. For each one, I added a few values, performed key operations like add, remove, pop, poll, etc., and printed the results.
 MyStack<Integer> stack = new MyStack<>();
 stack.push(1);

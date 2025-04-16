@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Stack pop: " + stack.pop()); // 3
         System.out.println("Stack peek: " + stack.peek()); // 2
 
-        // Тест MyQueue
+        // MyQueue
         MyQueue<String> queue = new MyQueue<>();
         queue.enqueue("A");
         queue.enqueue("B");

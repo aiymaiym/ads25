@@ -3,7 +3,7 @@ import structures.*;
 
 public class Main {
     public static void main(String[] args) {
-        // 🔹 Тест MyArrayList
+        // MyArrayList
         MyList<Integer> arrayList = new MyArrayList<>();
         arrayList.add(10);
         arrayList.add(20);
@@ -12,7 +12,7 @@ public class Main {
         arrayList.remove(0);
         System.out.println("ArrayList after remove: " + arrayList.get(0)); // 20
 
-        // 🔹 Тест MyLinkedList
+        // MyLinkedList
         MyList<String> linkedList = new MyLinkedList<>();
         linkedList.add("one");
         linkedList.add("two");
@@ -22,7 +22,7 @@ public class Main {
             System.out.println("LinkedList element: " + s); // one, three
         }
 
-        // 🔹 Тест MyStack
+        // MyStack
         MyStack<Integer> stack = new MyStack<>();
         stack.push(1);
         stack.push(2);
@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Stack pop: " + stack.pop()); // 3
         System.out.println("Stack peek: " + stack.peek()); // 2
 
-        // 🔹 Тест MyQueue
+        // Тест MyQueue
         MyQueue<String> queue = new MyQueue<>();
         queue.enqueue("A");
         queue.enqueue("B");
@@ -38,7 +38,7 @@ public class Main {
         System.out.println("Queue dequeue: " + queue.dequeue()); // A
         System.out.println("Queue peek: " + queue.peek()); // B
 
-        // 🔹 Тест MyMinHeap
+        // MyMinHeap
         MyMinHeap<Integer> heap = new MyMinHeap<>();
         heap.add(5);
         heap.add(2);

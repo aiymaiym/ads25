@@ -30,4 +30,3 @@ public class MyStack<T> {
         return list.size();
     }
 }
-

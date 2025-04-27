@@ -1,10 +1,10 @@
 package structures;
 
 public class MyHashTable<K, V> {
-    private class HashNode<K, V> {
+    public static class HashNode<K, V> {
         private K key;
         private V value;
-        private HashNode<K, V> next;
+        public HashNode<K, V> next;
 
         public HashNode(K key, V value) {
             this.key = key;
@@ -113,6 +113,10 @@ public class MyHashTable<K, V> {
             chainArray[index] = head.next;
         }
         return head.value;
+    }
+
+    public HashNode<K, V>[] getChainArray() {
+        return chainArray;
     }
 
 
